@@ -1,0 +1,30 @@
+Copyright (c) 2026 Government of Tamil Nadu — School Education Department
+
+INTERNAL USE LICENSE
+
+This work, including all source code, documentation, designs, schemas and
+related materials (collectively, the "Work"), is the property of the
+Government of Tamil Nadu, School Education Department, and is made available
+strictly for internal use by authorised personnel of the Department, the
+Tamil Nadu Educational Management Information System (TNEMIS) programme,
+the National Informatics Centre (NIC) and contracted engineering partners
+acting on their behalf.
+
+Permitted use:
+  1. Internal evaluation, development, testing, deployment and maintenance
+     of the TNEMIS Unified Award Management Platform.
+  2. Reference and adaptation for other Government of Tamil Nadu information
+     systems with prior written authorisation from the Director, TNEMIS.
+
+Restrictions:
+  - The Work may not be redistributed, sublicensed, sold, or published
+    externally without written authorisation from the Director, TNEMIS.
+  - The Work may not be used for any commercial purpose.
+
+Disclaimer:
+  THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR THE GOVERNMENT OF
+  TAMIL NADU BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING
+  FROM USE OF THE WORK.
+
+For licensing queries: tnemis-architecture@tnschools.gov.in
