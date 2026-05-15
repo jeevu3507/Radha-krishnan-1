@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Noto Sans Tamil', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+  :lang(ta) {
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary-pink {
+    @apply btn bg-tnpink text-white hover:bg-tnpink-dark shadow-soft;
+  }
+  .btn-primary-blue {
+    @apply btn bg-tnblue text-white hover:bg-tnblue-dark shadow-soft;
+  }
+  .btn-ghost {
+    @apply btn bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50;
+  }
+  .btn-danger {
+    @apply btn bg-red-50 text-red-700 ring-1 ring-red-200 hover:bg-red-100;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-soft ring-1 ring-slate-100;
+  }
+  .field-label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-600;
+  }
+  .field-required::after {
+    content: ' *';
+    @apply text-red-500;
+  }
+  .field-input {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-tnblue focus:ring-2 focus:ring-tnblue/15;
+  }
+  .field-input-pink:focus {
+    @apply border-tnpink ring-tnpink/15;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-green { @apply badge bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200; }
+  .badge-amber { @apply badge bg-amber-50 text-amber-800 ring-1 ring-amber-200; }
+  .badge-red   { @apply badge bg-red-50   text-red-700   ring-1 ring-red-200;   }
+  .badge-blue  { @apply badge bg-tnblue-light text-tnblue ring-1 ring-tnblue/20; }
+  .badge-pink  { @apply badge bg-tnpink-light text-tnpink-dark ring-1 ring-tnpink/20; }
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
