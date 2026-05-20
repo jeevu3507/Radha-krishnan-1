@@ -1,4 +1,4 @@
-export type Role = 'TEACHER' | 'CEO';
+export type Role = 'TEACHER' | 'CEO' | 'ADMIN';
 
 export type Locale = 'en' | 'ta';
 
@@ -81,3 +81,51 @@ export type SectionId =
   | 'objective'
   | 'performance'
   | 'documents';
+
+/* ── Super Admin types ───────────────────────────────────────────── */
+
+export interface AwardScheme {
+  id: string;
+  code: string;
+  nameEn: string;
+  nameTa: string;
+  cycleYear: number;
+  status: 'DRAFT' | 'OPEN' | 'CLOSED' | 'ARCHIVED';
+  openFrom: string;
+  closeAt: string;
+  applicantsCount: number;
+  shortlistedCount: number;
+  awardedCount: number;
+  schemaVersion: number;
+}
+
+export interface WorkflowStageDef {
+  id: string;
+  code: string;
+  label: string;
+  actorRole: string;
+  slaHours: number | null;
+  type: 'user' | 'single_approver' | 'committee' | 'terminal';
+}
+
+export interface PlatformUser {
+  id: string;
+  emisId: string;
+  name: string;
+  email: string;
+  role: 'TEACHER' | 'HM' | 'BEO' | 'DEEO' | 'CEO' | 'DSC_MEMBER' | 'STATE_REVIEWER' | 'STATE_ADMIN' | 'SUPER_ADMIN' | 'TECH_ADMIN';
+  district: string;
+  active: boolean;
+  lastLogin: string;
+}
+
+export interface AuditEntry {
+  id: string;
+  occurredAt: string;
+  actorName: string;
+  actorRole: string;
+  action: string;
+  entityType: string;
+  entityId: string;
+  ip: string;
+}
